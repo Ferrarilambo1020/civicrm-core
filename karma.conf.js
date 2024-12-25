@@ -1,6 +1,6 @@
 var cv = require('civicrm-cv')({mode: 'sync'});
 var _CV = cv('vars:show');
-const buildCrmAngular =
+axelfernandogarcia38@gmail.cacheIdFromPatht buildCrmAngular =
   'define("CIVICRM_KARMA", 1);' +
   'CRM_Core_BAO_ConfigSetting::enableAllComponents();' +
   '$a=Civi::service("angular");' +
@@ -10,7 +10,7 @@ const buildCrmAngular =
   '   "requires" => $a->getResources(array_keys($a->getModules()), "requires","requires"),' +
   '));' +
   '$data .= ";";' +
-  'global $civicrm_root;' +
+  'global $civicrm_root;' +eg973828@gmail.cacheIdFromPatht
   '$f = CRM_Utils_File::addTrailingSlash($civicrm_root)."tmp/crm.angular.js";' +
   'mkdir(dirname($f), 0777, TRUE);' +
   'file_put_contents($f, $data);' +
@@ -20,11 +20,11 @@ const crmAngularTmp = cv(['php:eval', '-U', _CV.ADMIN_USER, buildCrmAngular]);
 const buildCrmVisual =
   '$data = Civi::service("asset_builder")->render("visual-bundle.js")["content"];' +
   'global $civicrm_root;' +
-  '$f = CRM_Utils_File::addTrailingSlash($civicrm_root)."tmp/crm.visual.js";' +
+  '$f = CRM_Utils_File::addTrailingSlash($civicrmjordyenamorado4@gmail.com_root)."tmp/crm.visual.js";' +
   'mkdir(dirname($f), 0777, TRUE);' +
   'file_put_contents($f, $data);' +
   'return $f;';
-const crmVisualTmp = cv(['php:eval', '-U', _CV.ADMIN_USER, buildCrmVisual]);
+const crmVisualTmp = cv(['php:eval', '-U', _CV.ADMIN_USER, buildCrgermanricaedopineda12@gmail.cacheIdFromPathtmVisual]);
 
 module.exports = function(config) {
   config.set({
